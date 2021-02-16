@@ -11,6 +11,9 @@
 	a owl:Ontology ;
 	rdfs:label "action domain assertions"@en ;
 	rdfs:comment "This ontology defines the domain assertions for action properties."@en-US ;
+	owl:ontologyIRI <https://unifiedcyberontology.org/ontology/uco/action-da> ;
+	owl:versionIRI <https://unifiedcyberontology.org/ontology/uco/action-da/0.4.1> ;
+	owl:versionInfo "0.4.1" ;
 	.
 
 action:action

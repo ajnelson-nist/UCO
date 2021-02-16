@@ -1,9 +1,10 @@
 # baseURI: https://unifiedcyberontology.org/ontology/uco/pattern
-# imports: https://unifiedcyberontology.org/ontology/uco/core
+# imports: http://dev.caseontology.org/ontology/uco/core/0.4.1
 
 @base <https://unifiedcyberontology.org/ontology/uco/pattern> .
+@prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pattern: <https://unifiedcyberontology.org/ontology/uco/pattern#> .
+@prefix pattern: <http://dev.caseontology.org/ontology/uco/pattern/0.4.1#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -11,7 +12,10 @@
 <https://unifiedcyberontology.org/ontology/uco/pattern>
 	a owl:Ontology ;
 	rdfs:label "uco-pattern"@en ;
-	owl:imports <https://unifiedcyberontology.org/ontology/uco/core> ;
+	owl:imports <http://dev.caseontology.org/ontology/uco/core/0.4.1> ;
+	owl:ontologyIRI <https://unifiedcyberontology.org/ontology/uco/pattern> ;
+	owl:versionIRI <http://dev.caseontology.org/ontology/uco/pattern/0.4.1> ;
+	owl:versionInfo "0.4.1" ;
 	.
 
 pattern:LogicalPattern
@@ -31,7 +35,7 @@ pattern:LogicalPattern
 
 pattern:Pattern
 	a owl:Class ;
-	rdfs:subClassOf <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+	rdfs:subClassOf core:UcoObject ;
 	rdfs:label "Pattern"@en ;
 	rdfs:comment
 		"A combination of properties, acts, tendencies, etc., forming a consistent or characteristic arrangement."@en ,

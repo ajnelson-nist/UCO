@@ -1,16 +1,20 @@
 # baseURI: https://unifiedcyberontology.org/ontology/uco/action
-# imports: https://unifiedcyberontology.org/ontology/uco/core
-# imports: https://unifiedcyberontology.org/ontology/uco/location
-# imports: https://unifiedcyberontology.org/ontology/uco/pattern
-# imports: https://unifiedcyberontology.org/ontology/uco/types
-# imports: https://unifiedcyberontology.org/ontology/uco/vocabulary
+# imports: http://dev.caseontology.org/ontology/uco/core/0.4.1
+# imports: http://dev.caseontology.org/ontology/uco/location/0.4.1
+# imports: http://dev.caseontology.org/ontology/uco/pattern/0.4.1
+# imports: http://dev.caseontology.org/ontology/uco/types/0.4.1
+# imports: http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1
 
 @base <https://unifiedcyberontology.org/ontology/uco/action> .
-@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#> .
+@prefix action: <http://dev.caseontology.org/ontology/uco/action/0.4.1#> .
+@prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
+@prefix location: <http://dev.caseontology.org/ontology/uco/location/0.4.1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pattern: <http://dev.caseontology.org/ontology/uco/pattern/0.4.1#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vocab: <https://unifiedcyberontology.org/ontology/uco/vocabulary#> .
+@prefix types: <http://dev.caseontology.org/ontology/uco/types/0.4.1#> .
+@prefix vocab: <http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://unifiedcyberontology.org/ontology/uco/action>
@@ -18,19 +22,21 @@
 	rdfs:label "uco-action"@en ;
 	rdfs:comment "This ontology defines classes and properties for characterizing actions."@en-US ;
 	owl:imports
-		<https://unifiedcyberontology.org/ontology/uco/core> ,
-		<https://unifiedcyberontology.org/ontology/uco/location> ,
-		<https://unifiedcyberontology.org/ontology/uco/pattern> ,
-		<https://unifiedcyberontology.org/ontology/uco/types> ,
-		<https://unifiedcyberontology.org/ontology/uco/vocabulary>
+		<http://dev.caseontology.org/ontology/uco/core/0.4.1> ,
+		<http://dev.caseontology.org/ontology/uco/location/0.4.1> ,
+		<http://dev.caseontology.org/ontology/uco/pattern/0.4.1> ,
+		<http://dev.caseontology.org/ontology/uco/types/0.4.1> ,
+		<http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1>
 		;
-	owl:versionInfo "0.4.0" ;
+	owl:ontologyIRI <https://unifiedcyberontology.org/ontology/uco/action> ;
+	owl:versionIRI <http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1> ;
+	owl:versionInfo "0.4.1" ;
 	.
 
 action:Action
 	a owl:Class ;
 	rdfs:subClassOf
-		<https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ,
+		core:UcoObject ,
 		[
 			a owl:Restriction ;
 			owl:onProperty action:actionStatus ;
@@ -60,7 +66,7 @@ action:Action
 action:ActionArgument
 	a owl:Class ;
 	rdfs:subClassOf
-		<https://unifiedcyberontology.org/ontology/uco/core#Facet> ,
+		core:Facet ,
 		[
 			a owl:Restriction ;
 			owl:onProperty action:argumentName ;
@@ -81,7 +87,7 @@ action:ActionArgument
 action:ActionEstimation
 	a owl:Class ;
 	rdfs:subClassOf
-		<https://unifiedcyberontology.org/ontology/uco/core#Facet> ,
+		core:Facet ,
 		[
 			a owl:Restriction ;
 			owl:onProperty action:estimatedCost ;
@@ -114,7 +120,7 @@ action:ActionEstimation
 action:ActionFrequency
 	a owl:Class ;
 	rdfs:subClassOf
-		<https://unifiedcyberontology.org/ontology/uco/core#Facet> ,
+		core:Facet ,
 		[
 			a owl:Restriction ;
 			owl:onProperty action:rate ;
@@ -189,7 +195,7 @@ action:ActionPattern
 	a owl:Class ;
 	rdfs:subClassOf
 		action:Action ,
-		<https://unifiedcyberontology.org/ontology/uco/pattern#Pattern>
+		pattern:Pattern
 		;
 	rdfs:label "ActionPattern"@en ;
 	rdfs:comment "A logical pattern of characteristic action property values."@en ;
@@ -198,17 +204,17 @@ action:ActionPattern
 action:ActionReferences
 	a owl:Class ;
 	rdfs:subClassOf
-		<https://unifiedcyberontology.org/ontology/uco/core#Facet> ,
+		core:Facet ,
 		[
 			a owl:Restriction ;
 			owl:onProperty action:environment ;
-			owl:onClass <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+			owl:onClass core:UcoObject ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty action:performer ;
-			owl:onClass <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+			owl:onClass core:UcoObject ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 		]
 		;
@@ -267,14 +273,14 @@ action:environment
 	a owl:ObjectProperty ;
 	rdfs:label "environment"@en ;
 	rdfs:comment "The environment wherein an action occurs."@en ;
-	rdfs:range <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+	rdfs:range core:UcoObject ;
 	.
 
 action:error
 	a owl:ObjectProperty ;
 	rdfs:label "error"@en ;
 	rdfs:comment "A characterization of the differences between the expected and the actual performance of the action."@en ;
-	rdfs:range <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+	rdfs:range core:UcoObject ;
 	.
 
 action:estimatedCost
@@ -302,21 +308,21 @@ action:instrument
 	a owl:ObjectProperty ;
 	rdfs:label "instrument"@en ;
 	rdfs:comment "The things used to perform an action."@en ;
-	rdfs:range <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+	rdfs:range core:UcoObject ;
 	.
 
 action:location
 	a owl:ObjectProperty ;
 	rdfs:label "location"@en ;
 	rdfs:comment "The locations where an action occurs."@en ;
-	rdfs:range <https://unifiedcyberontology.org/ontology/uco/location#Location> ;
+	rdfs:range location:Location ;
 	.
 
 action:object
 	a owl:ObjectProperty ;
 	rdfs:label "object"@en ;
 	rdfs:comment "The things that the action is performed on/against."@en ;
-	rdfs:range <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+	rdfs:range core:UcoObject ;
 	.
 
 action:objective
@@ -330,14 +336,14 @@ action:participant
 	a owl:ObjectProperty ;
 	rdfs:label "participant"@en ;
 	rdfs:comment "The supporting (non-primary) performers of an action."@en ;
-	rdfs:range <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+	rdfs:range core:UcoObject ;
 	.
 
 action:performer
 	a owl:ObjectProperty ;
 	rdfs:label "performer"@en ;
 	rdfs:comment "The primary performer of an action."@en ;
-	rdfs:range <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+	rdfs:range core:UcoObject ;
 	.
 
 action:phase
@@ -359,7 +365,7 @@ action:result
 	a owl:ObjectProperty ;
 	rdfs:label "result"@en ;
 	rdfs:comment "The things resulting from performing an action."@en ;
-	rdfs:range <https://unifiedcyberontology.org/ontology/uco/core#UcoObject> ;
+	rdfs:range core:UcoObject ;
 	.
 
 action:scale
