@@ -13,7 +13,7 @@
 	a owl:Ontology ;
 	rdfs:label "observable domain assertions"@en ;
 	owl:ontologyIRI <https://unifiedcyberontology.org/ontology/uco/observable-da> ;
-	owl:versionIRI <http://dev.caseontology.org/ontology/uco/observable/0.4.1> ;
+	owl:versionIRI <http://dev.caseontology.org/ontology/uco/observable-da/0.4.1> ;
 	owl:versionInfo "0.4.1" ;
 	.
 

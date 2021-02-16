@@ -12,7 +12,7 @@
 <https://unifiedcyberontology.org/ontology/uco/time>
 	a owl:Ontology ;
 	rdfs:label "uco-time"@en ;
-	owl:imports <http://dev.caseontology.org/ontology/uco/core/0.4.1#> ;
+	owl:imports <http://dev.caseontology.org/ontology/uco/core/0.4.1> ;
 	owl:ontologyIRI <https://unifiedcyberontology.org/ontology/uco/time> ;
 	owl:versionIRI <http://dev.caseontology.org/ontology/uco/time/0.4.1> ;
 	owl:versionInfo "0.4.1" ;
