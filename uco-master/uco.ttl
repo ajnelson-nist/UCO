@@ -1,5 +1,4 @@
-@prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
-@prefix types: <http://dev.caseontology.org/ontology/uco/types/0.4.1#> .
+@prefix : <http://dev.caseontology.org/ontology/uco/uco/0.4.1#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 @prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
