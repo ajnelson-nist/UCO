@@ -1,7 +1,7 @@
-# baseURI: http://dev.caseontology.org/ontology/uco/marking/0.4.1
+# baseURI: https://unifiedcyberontology.org/ontology/uco/marking
 # imports: http://dev.caseontology.org/ontology/uco/core/0.4.1
 
-@base <http://dev.caseontology.org/ontology/uco/marking/0.4.1> .
+@base <https://unifiedcyberontology.org/ontology/uco/marking> .
 @prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix marking: <http://dev.caseontology.org/ontology/uco/marking/0.4.1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -16,7 +16,7 @@
 	owl:imports <http://dev.caseontology.org/ontology/uco/core/0.4.1> ;
 	owl:ontologyIRI <https://unifiedcyberontology.org/ontology/uco/marking> ;
 	owl:versionIRI <http://dev.caseontology.org/ontology/uco/marking/0.4.1> ;
-	owl:versionInfo "0.4.1"
+	owl:versionInfo "0.4.1" ;
 	.
 
 marking:GranularMarking

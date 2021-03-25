@@ -1,7 +1,7 @@
-# baseURI: http://dev.caseontology.org/ontology/uco/location/0.4.1
+# baseURI: https://unifiedcyberontology.org/ontology/uco/location
 # imports: http://dev.caseontology.org/ontology/uco/core/0.4.1
 
-@base <http://dev.caseontology.org/ontology/uco/location/0.4.1> .
+@base <https://unifiedcyberontology.org/ontology/uco/location> .
 @prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix location: <http://dev.caseontology.org/ontology/uco/location/0.4.1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

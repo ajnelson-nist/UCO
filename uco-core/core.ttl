@@ -1,7 +1,7 @@
-# baseURI: http://dev.caseontology.org/ontology/uco/core/0.4.1
+# baseURI: https://unifiedcyberontology.org/ontology/uco/core
 # imports: http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1
 
-@base <http://dev.caseontology.org/ontology/uco/core/0.4.1> .
+@base <https://unifiedcyberontology.org/ontology/uco/core> .
 @prefix : <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix identity: <http://dev.caseontology.org/ontology/uco/identity/0.4.1#> .
