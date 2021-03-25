@@ -10,7 +10,6 @@
 @prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix location: <http://dev.caseontology.org/ontology/uco/location/0.4.1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pattern: <http://dev.caseontology.org/ontology/uco/pattern/0.4.1#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pattern: <http://dev.caseontology.org/ontology/uco/pattern/0.4.1#> .
