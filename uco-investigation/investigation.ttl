@@ -8,12 +8,11 @@
 @prefix action: <http://dev.caseontology.org/ontology/uco/action/0.4.1#> .
 @prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix investigation: <http://dev.caseontology.org/ontology/uco/investigation/0.4.1#> .
-@prefix location: <http://dev.caseontology.org/ontology/uco/location/0.4.1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix role: <http://dev.caseontology.org/ontology/uco/role/0.4.1#> .
-@prefix vocabulary: <http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1#> .
+@prefix vocab: <http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://unifiedcyberontology.org/ontology/uco/investigation>
@@ -209,7 +208,7 @@ investigation:investigationForm
 	a owl:DatatypeProperty ;
 	rdfs:label "investigationForm"@en ;
 	rdfs:comment "A label categorizing a type of investigation (case, incident, suspicious-activity, etc.)"@en ;
-	rdfs:range vocabulary:InvestigationFormVocab ;
+	rdfs:range vocab:InvestigationFormVocab ;
 	.
 
 investigation:investigationStatus

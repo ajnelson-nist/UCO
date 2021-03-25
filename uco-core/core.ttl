@@ -2,12 +2,14 @@
 # imports: http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1
 
 @base <https://unifiedcyberontology.org/ontology/uco/core> .
+@prefix : <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix identity: <http://dev.caseontology.org/ontology/uco/identity/0.4.1#> .
 @prefix marking: <http://dev.caseontology.org/ontology/uco/marking/0.4.1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix types: <http://dev.caseontology.org/ontology/uco/types/0.4.1#> .
 @prefix vocab: <http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -233,7 +235,7 @@ core:UcoObject
 		[
 			a owl:Restriction ;
 			owl:onProperty core:id ;
-			owl:onDataRange identity:Identifier ;
+			owl:onDataRange types:Identifier ;
 			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 		]
 		;
@@ -330,7 +332,7 @@ core:id
 	a owl:DatatypeProperty ;
 	rdfs:label "id"@en ;
 	rdfs:comment "A globally unique identifier for a characterization of a concept."@en ;
-	rdfs:range identity:Identifier ;
+	rdfs:range types:Identifier ;
 	.
 
 core:isDirectional
