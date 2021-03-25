@@ -1,6 +1,6 @@
-# baseURI: https://unifiedcyberontology.org/ontology/uco/pattern-da
+# baseURI: http://dev.caseontology.org/ontology/uco/pattern-da/0.4.1
 
-@base <https://unifiedcyberontology.org/ontology/uco/pattern-da> .
+@base <http://dev.caseontology.org/ontology/uco/pattern-da/0.4.1> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pattern: <http://dev.caseontology.org/ontology/uco/pattern/0.4.1#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

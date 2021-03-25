@@ -1,6 +1,6 @@
-# baseURI: https://unifiedcyberontology.org/ontology/uco/core-da
+# baseURI: http://dev.caseontology.org/ontology/uco/core-da/0.4.1
 
-@base <https://unifiedcyberontology.org/ontology/uco/core-da> .
+@base <http://dev.caseontology.org/ontology/uco/core-da/0.4.1> .
 @prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix investigation: <http://dev.caseontology.org/ontology/uco/investigation/0.4.1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

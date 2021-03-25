@@ -1,8 +1,8 @@
-# baseURI: https://unifiedcyberontology.org/ontology/uco/identity
+# baseURI: http://dev.caseontology.org/ontology/uco/identity/0.4.1
 # imports: http://dev.caseontology.org/ontology/uco/core/0.4.1
 # imports: http://dev.caseontology.org/ontology/uco/location/0.4.1
 
-@base <https://unifiedcyberontology.org/ontology/uco/identity> .
+@base <http://dev.caseontology.org/ontology/uco/identity/0.4.1> .
 @prefix core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
 @prefix identity: <http://dev.caseontology.org/ontology/uco/identity/0.4.1#> .
 @prefix location: <http://dev.caseontology.org/ontology/uco/location/0.4.1#> .
