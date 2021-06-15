@@ -2,12 +2,20 @@
 # imports: https://unifiedcyberontology.org/ontology/uco/core
 
 @base <https://unifiedcyberontology.org/ontology/uco/tool> .
+@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#> .
 @prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#> .
+@prefix location: <https://unifiedcyberontology.org/ontology/uco/location#> .
+@prefix marking: <https://unifiedcyberontology.org/ontology/uco/marking#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pattern: <https://unifiedcyberontology.org/ontology/uco/pattern#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <https://unifiedcyberontology.org/ontology/uco/role#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix tool: <https://unifiedcyberontology.org/ontology/uco/tool#> .
+@prefix types: <https://unifiedcyberontology.org/ontology/uco/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://unifiedcyberontology.org/ontology/uco/tool>
@@ -24,6 +32,80 @@ tool:AnalyticTool
 	rdfs:subClassOf tool:Tool ;
 	rdfs:label "AnalyticTool"@en ;
 	rdfs:comment "An analytic tool is an artifact of hardware and/or software utilized to accomplish a task or purpose of explanation, interpretation or logical reasoning."@en ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:creator ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:servicePack ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:toolType ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:version ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		] ,
+		[
+			sh:path tool:references ;
+		]
+		;
 	sh:targetClass tool:AnalyticTool ;
 	.
 
@@ -221,6 +303,80 @@ tool:DefensiveTool
 	rdfs:subClassOf tool:Tool ;
 	rdfs:label "DefensiveTool"@en ;
 	rdfs:comment "A defensive tool is an artifact of hardware and/or software utilized to accomplish a task or purpose of guarding."@en ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:creator ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:servicePack ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:toolType ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:version ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		] ,
+		[
+			sh:path tool:references ;
+		]
+		;
 	sh:targetClass tool:DefensiveTool ;
 	.
 
@@ -278,18 +434,32 @@ tool:MaliciousTool
 	rdfs:subClassOf tool:Tool ;
 	rdfs:label "MaliciousTool"@en ;
 	rdfs:comment "A malicious tool is an artifact of hardware and/or software utilized to accomplish a malevolent task or purpose."@en ;
-	sh:targetClass tool:MaliciousTool ;
-	.
-
-tool:Tool
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:subClassOf core:UcoObject ;
-	rdfs:label "Tool"@en ;
-	rdfs:comment "A tool is an element of hardware and/or software utilized to carry out a particular function."@en ;
 	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
@@ -309,6 +479,115 @@ tool:Tool
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:path tool:version ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		] ,
+		[
+			sh:path tool:references ;
+		]
+		;
+	sh:targetClass tool:MaliciousTool ;
+	.
+
+tool:Tool
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf core:UcoObject ;
+	rdfs:label "Tool"@en ;
+	rdfs:comment "A tool is an element of hardware and/or software utilized to carry out a particular function."@en ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:creator ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:servicePack ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:toolType ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path tool:version ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
 		] ,
 		[
 			sh:path tool:references ;

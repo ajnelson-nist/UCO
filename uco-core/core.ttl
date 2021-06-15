@@ -2,14 +2,19 @@
 # imports: https://unifiedcyberontology.org/ontology/uco/vocabulary
 
 @base <https://unifiedcyberontology.org/ontology/uco/core> .
+@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#> .
 @prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
 @prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#> .
+@prefix location: <https://unifiedcyberontology.org/ontology/uco/location#> .
 @prefix marking: <https://unifiedcyberontology.org/ontology/uco/marking#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pattern: <https://unifiedcyberontology.org/ontology/uco/pattern#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <https://unifiedcyberontology.org/ontology/uco/role#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix types: <https://unifiedcyberontology.org/ontology/uco/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://unifiedcyberontology.org/ontology/uco/core>
@@ -27,11 +32,65 @@ core:Annotation
 	rdfs:subClassOf core:Assertion ;
 	rdfs:label "Annotation"@en ;
 	rdfs:comment "An annotation is an assertion made in relation to one or more objects."@en ;
-	sh:property [
-		sh:class core:UcoObject ;
-		sh:minCount "1"^^xsd:integer ;
-		sh:path core:object ;
-	] ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class core:UcoObject ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:object ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:statement ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:Annotation ;
 	.
 
@@ -43,9 +102,60 @@ core:Assertion
 	rdfs:subClassOf core:UcoObject ;
 	rdfs:label "Assertion"@en ;
 	rdfs:comment "An assertion is a statement declared to be true."@en ;
-	sh:property [
-		sh:path core:statement ;
-	] ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:statement ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:Assertion ;
 	.
 
@@ -57,11 +167,62 @@ core:AttributedName
 	rdfs:subClassOf core:UcoObject ;
 	rdfs:label "AttributedName"@en ;
 	rdfs:comment "An attributed name is a name of an entity issued by some attributed naming authority."@en ;
-	sh:property [
-		sh:datatype xsd:string ;
-		sh:maxCount "1"^^xsd:integer ;
-		sh:path core:namingAuthority ;
-	] ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:namingAuthority ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:AttributedName ;
 	.
 
@@ -73,6 +234,67 @@ core:Bundle
 	rdfs:subClassOf core:EnclosingCompilation ;
 	rdfs:label "Bundle"@en ;
 	rdfs:comment "A bundle is a container for a grouping of UCO content with no presumption of shared context."@en ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class core:UcoObject ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:object ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:description ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:Bundle ;
 	.
 
@@ -84,6 +306,57 @@ core:Compilation
 	rdfs:subClassOf core:UcoObject ;
 	rdfs:label "Compilation"@en ;
 	rdfs:comment "A compilation is a grouping of things."@en ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:Compilation ;
 	.
 
@@ -112,11 +385,62 @@ core:ContextualCompilation
 	rdfs:subClassOf core:Compilation ;
 	rdfs:label "ContextualCompilation"@en ;
 	rdfs:comment "A contextual compilation is a grouping of things sharing some context (e.g., a set of network connections observed on a given day, all accounts associated with a given person)."@en ;
-	sh:property [
-		sh:class core:UcoObject ;
-		sh:minCount "1"^^xsd:integer ;
-		sh:path core:object ;
-	] ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class core:UcoObject ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:object ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:ContextualCompilation ;
 	.
 
@@ -130,9 +454,24 @@ core:ControlledVocabulary
 	rdfs:comment "A controlled vocabulary is an explicitly constrained set of string values."@en ;
 	sh:property
 		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
 			sh:datatype xsd:anyURI ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:constrainingVocabularyReference ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
@@ -144,6 +483,40 @@ core:ControlledVocabulary
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:constrainingVocabularyName ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
 		]
 		;
 	sh:targetClass core:ControlledVocabulary ;
@@ -159,14 +532,63 @@ core:EnclosingCompilation
 	rdfs:comment "An enclosing compilation is a container for a grouping of things."@en ;
 	sh:property
 		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
 			sh:class core:UcoObject ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:path core:object ;
 		] ,
 		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:description ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
 		]
 		;
 	sh:targetClass core:EnclosingCompilation ;
@@ -214,9 +636,65 @@ core:Grouping
 	rdfs:subClassOf core:ContextualCompilation ;
 	rdfs:label "Grouping"@en ;
 	rdfs:comment "A grouping is a compilation of referenced UCO content with a shared context."@en ;
-	sh:property [
-		sh:path core:context ;
-	] ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class core:UcoObject ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:object ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:context ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:Grouping ;
 	.
 
@@ -228,6 +706,57 @@ core:IdentityAbstraction
 	rdfs:subClassOf core:UcoObject ;
 	rdfs:label "IdentityAbstraction"@en ;
 	rdfs:comment "An identity abstraction is a grouping of identifying characteristics unique to an individual or organization. This class is an ontological structural abstraction for this concept. Implementations of this concept should utilize the identity:Identity class."@en ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:IdentityAbstraction ;
 	.
 
@@ -239,6 +768,57 @@ core:Item
 	rdfs:subClassOf core:UcoObject ;
 	rdfs:label "Item"@en ;
 	rdfs:comment "An item is a distinct article or unit."@en ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:Item ;
 	.
 
@@ -250,6 +830,57 @@ core:MarkingDefinitionAbstraction
 	rdfs:subClassOf core:UcoObject ;
 	rdfs:label "MarkingDefinitionAbstraction"@en ;
 	rdfs:comment "A marking definition abstraction is a grouping of characteristics unique to the expression of a specific data marking conveying restrictions, permissions, and other guidance for how marked data can be used and shared. This class is an ontological structural abstraction for this concept. Implementations of this concept should utilize the marking:MarkingDefinition class."@en ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:MarkingDefinitionAbstraction ;
 	.
 
@@ -261,6 +892,57 @@ core:ModusOperandi
 	rdfs:subClassOf core:UcoObject ;
 	rdfs:label "ModusOperandi"@en ;
 	rdfs:comment "A modus operandi is a particular method of operation (how a particular entity behaves or the resources they use)."@en ;
+	sh:property
+		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
+		]
+		;
 	sh:targetClass core:ModusOperandi ;
 	.
 
@@ -274,6 +956,11 @@ core:Relationship
 	rdfs:comment "A relationship is a grouping of characteristics unique to an assertion that one or more objects are related to another object in some way."@en ;
 	sh:property
 		[
+			sh:class core:ExternalReference ;
+			sh:minCount "0"^^xsd:integer ;
+			sh:path core:externalReference ;
+		] ,
+		[
 			sh:class core:UcoObject ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
@@ -285,10 +972,20 @@ core:Relationship
 			sh:path core:source ;
 		] ,
 		[
+			sh:class identity:Identity ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:createdBy ;
+		] ,
+		[
 			sh:datatype xsd:boolean ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:path core:isDirectional ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
@@ -296,10 +993,44 @@ core:Relationship
 			sh:path core:kindOfRelationship ;
 		] ,
 		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:name ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path core:specVersion ;
+		] ,
+		[
+			sh:datatype types:Identifier ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path core:id ;
+		] ,
+		[
+			sh:path core:description ;
+		] ,
+		[
 			sh:path core:endTime ;
 		] ,
 		[
+			sh:path core:hasFacet ;
+		] ,
+		[
+			sh:path core:modifiedTime ;
+		] ,
+		[
+			sh:path core:objectMarking ;
+		] ,
+		[
 			sh:path core:startTime ;
+		] ,
+		[
+			sh:path core:tag ;
+		] ,
+		[
+			sh:path core:type ;
 		]
 		;
 	sh:targetClass core:Relationship ;
