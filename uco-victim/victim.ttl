@@ -3,42 +3,147 @@
 # imports: https://unifiedcyberontology.org/ontology/uco/role
 
 @base <https://unifiedcyberontology.org/ontology/uco/victim> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix role: <https://unifiedcyberontology.org/ontology/uco/role#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix victim: <https://unifiedcyberontology.org/ontology/uco/victim#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#>.
+@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#>.
+@prefix types: <https://unifiedcyberontology.org/ontology/uco/types#>.
+@prefix marking: <https://unifiedcyberontology.org/ontology/uco/marking#>.
+@prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#>.
+@prefix location: <https://unifiedcyberontology.org/ontology/uco/location#>.
+@prefix pattern: <https://unifiedcyberontology.org/ontology/uco/pattern#>.
+@prefix role: <https://unifiedcyberontology.org/ontology/uco/role#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix victim: <https://unifiedcyberontology.org/ontology/uco/victim#>.
+@prefix xs: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://unifiedcyberontology.org/ontology/uco/victim>
-	a owl:Ontology ;
-	rdfs:label "uco-victim"@en ;
-	owl:imports
-		<https://unifiedcyberontology.org/ontology/uco/core> ,
-		<https://unifiedcyberontology.org/ontology/uco/role>
-		;
-	.
 
-victim:Victim
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:subClassOf role:NeutralRole ;
-	rdfs:label "Victim"@en ;
-	rdfs:comment "A victim is a role played by a person or organization that is/was the target of some malicious action."@en ;
-	sh:targetClass victim:Victim ;
-	.
+<https://unifiedcyberontology.org/ontology/uco/victim> a owl:Ontology ;
+    rdfs:label "uco-victim"@en ;
+    owl:imports <https://unifiedcyberontology.org/ontology/uco/core>,
+        <https://unifiedcyberontology.org/ontology/uco/role> .
 
-victim:VictimTargeting
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:subClassOf victim:Victim ;
-	rdfs:label "VictimTargeting"@en ;
-	rdfs:comment "A victim targeting is a grouping of characteristics unique to people or organizations that are the target of some malicious activity."@en ;
-	sh:targetClass victim:VictimTargeting ;
-	.
+victim:VictimTargeting a owl:Class,
+        sh:NodeShape ;
+	#from victim:Victim
+	#from role:Role
+	#from role:NeutralRole
+	#from core:UcoObject
+    sh:property [
+        sh:path core:objectMarking
+    ] ;
+    sh:property [
+        sh:path core:type
+    ] ;
+    sh:property [
+        sh:path core:objectCreatedTime ;
+        sh:datatype xsd:dateTime ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:id ;
+        sh:class types:Identifier ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:specVersion ;
+        sh:datatype xsd:string ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:externalReference ;
+        sh:class core:ExternalReference ;
+        sh:minCount "0"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:description
+    ] ;
+    sh:property [
+        sh:path core:hasFacet
+    ] ;
+    sh:property [
+        sh:path core:tag
+    ] ;
+    sh:property [
+        sh:path core:createdBy ;
+        sh:class core:IdentityAbstraction ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:modifiedTime
+    ] ;
+    sh:property [
+        sh:path core:name ;
+        sh:datatype xsd:string ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+
+    rdfs:label "VictimTargeting"@en ;
+    rdfs:comment "A victim targeting is a grouping of characteristics unique to people or organizations that are the target of some malicious activity."@en ;
+    rdfs:subClassOf victim:Victim ;
+    sh:targetClass victim:VictimTargeting .
+
+victim:Victim a owl:Class,
+        sh:NodeShape ;
+	#from role:Role
+	#from role:NeutralRole
+	#from core:UcoObject
+    sh:property [
+        sh:path core:objectMarking
+    ] ;
+    sh:property [
+        sh:path core:type
+    ] ;
+    sh:property [
+        sh:path core:objectCreatedTime ;
+        sh:datatype xsd:dateTime ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:id ;
+        sh:class types:Identifier ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:specVersion ;
+        sh:datatype xsd:string ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:externalReference ;
+        sh:class core:ExternalReference ;
+        sh:minCount "0"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:description
+    ] ;
+    sh:property [
+        sh:path core:hasFacet
+    ] ;
+    sh:property [
+        sh:path core:tag
+    ] ;
+    sh:property [
+        sh:path core:createdBy ;
+        sh:class core:IdentityAbstraction ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+    sh:property [
+        sh:path core:modifiedTime
+    ] ;
+    sh:property [
+        sh:path core:name ;
+        sh:datatype xsd:string ;
+        sh:maxCount "1"^^xsd:nonNegativeInteger
+    ] ;
+
+    rdfs:label "Victim"@en ;
+    rdfs:comment "A victim is a role played by a person or organization that is/was the target of some malicious action."@en ;
+    rdfs:subClassOf role:NeutralRole ;
+    sh:targetClass victim:Victim .
+
+
 

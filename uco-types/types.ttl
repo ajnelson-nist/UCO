@@ -3,170 +3,119 @@
 # imports: https://unifiedcyberontology.org/ontology/uco/vocabulary
 
 @base <https://unifiedcyberontology.org/ontology/uco/types> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix types: <https://unifiedcyberontology.org/ontology/uco/types#> .
-@prefix vocabulary: <https://unifiedcyberontology.org/ontology/uco/vocabulary#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#>.
+@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#>.
+@prefix types: <https://unifiedcyberontology.org/ontology/uco/types#>.
+@prefix marking: <https://unifiedcyberontology.org/ontology/uco/marking#>.
+@prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#>.
+@prefix location: <https://unifiedcyberontology.org/ontology/uco/location#>.
+@prefix pattern: <https://unifiedcyberontology.org/ontology/uco/pattern#>.
+@prefix role: <https://unifiedcyberontology.org/ontology/uco/role#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix vocabulary: <https://unifiedcyberontology.org/ontology/uco/vocabulary#>.
 
-<https://unifiedcyberontology.org/ontology/uco/types>
-	a owl:Ontology ;
-	rdfs:label "uco-types"@en ;
-	owl:imports
-		<https://unifiedcyberontology.org/ontology/uco/core> ,
-		<https://unifiedcyberontology.org/ontology/uco/vocabulary>
-		;
-	.
 
-types:ControlledDictionary
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:label "ControlledDictionary"@en ;
-	rdfs:comment "A controlled dictionary is a list of (term/key, value) pairs where each term/key exists no more than once and is constrained to an explicitly defined set of values."@en ;
-	sh:property [
-		sh:class types:ControlledDictionaryEntry ;
-		sh:minCount "1"^^xsd:nonNegativeInteger ;
-		sh:path types:entry ;
-	] ;
-	sh:targetClass types:ControlledDictionary ;
-	.
+<https://unifiedcyberontology.org/ontology/uco/types> a owl:Ontology ;
+    rdfs:label "uco-types"@en ;
+    owl:imports <https://unifiedcyberontology.org/ontology/uco/core>,
+        <https://unifiedcyberontology.org/ontology/uco/vocabulary> .
 
-types:ControlledDictionaryEntry
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:label "ControlledDictionaryEntry"@en ;
-	rdfs:comment "A controlled dictionary entry is a single (term/key, value) pair where the term/key is constrained to an explicitly defined set of values."@en ;
-	sh:property
-		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
-			sh:path types:value ;
-		] ,
-		[
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
-			sh:path types:key ;
-		]
-		;
-	sh:targetClass types:ControlledDictionaryEntry ;
-	.
+types:Identifier a rdfs:Datatype ;
+    rdfs:comment "An identifier is a string conformant to the specified UUID-based format for UCO object identifiers."@en .
 
-types:Dictionary
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:label "Dictionary"@en ;
-	rdfs:comment "A dictionary is list of (term/key, value) pairs with each term/key existing no more than once."@en ;
-	sh:property [
-		sh:class types:DictionaryEntry ;
-		sh:minCount "1"^^xsd:nonNegativeInteger ;
-		sh:path types:entry ;
-	] ;
-	sh:targetClass types:Dictionary ;
-	.
+types:NativeFormatString a rdfs:Datatype ;
+    rdfs:comment "Specifies data in its native format of some external language. The data may be encoded in Base64 per [RFC4648]. Data encoded in Base64 must be denoted as such using the encoded property."@en .
 
-types:DictionaryEntry
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:label "DictionaryEntry"@en ;
-	rdfs:comment "A dictionary entry is a single (term/key, value) pair."@en ;
-	sh:property
-		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
-			sh:path types:key ;
-		] ,
-		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
-			sh:path types:value ;
-		]
-		;
-	sh:targetClass types:DictionaryEntry ;
-	.
+types:StructuredText a rdfs:Datatype ;
+    rdfs:comment "Expresses string-based data in some information structuring format (e.g., HTML5)."@en .
 
-types:Hash
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:label "Hash"@en ;
-	rdfs:comment "A hash is a grouping of characteristics unique to the result of applying a mathematical algorithm that maps data of arbitrary size to a bit string (the 'hash') and is a one-way function, that is, a function which is practically infeasible to invert. This is commonly used for integrity checking of data. [based on https://en.wikipedia.org/wiki/Cryptographic_hash_function]"@en ;
-	sh:property
-		[
-			sh:datatype xsd:hexBinary ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
-			sh:path types:hashValue ;
-		] ,
-		[
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
-			sh:path types:hashMethod ;
-		]
-		;
-	sh:targetClass types:Hash ;
-	.
+types:ControlledDictionary a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "ControlledDictionary"@en ;
+    rdfs:comment "A controlled dictionary is a list of (term/key, value) pairs where each term/key exists no more than once and is constrained to an explicitly defined set of values."@en ;
+    sh:property [ sh:class types:ControlledDictionaryEntry ;
+            sh:minCount "1"^^xsd:nonNegativeInteger ;
+            sh:path types:entry ] ;
+    sh:targetClass types:ControlledDictionary .
 
-types:Identifier
-	a rdfs:Datatype ;
-	rdfs:comment "An identifier is a string conformant to the specified UUID-based format for UCO object identifiers."@en ;
-	.
+types:Dictionary a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Dictionary"@en ;
+    rdfs:comment "A dictionary is list of (term/key, value) pairs with each term/key existing no more than once."@en ;
+    sh:property [ sh:class types:DictionaryEntry ;
+            sh:minCount "1"^^xsd:nonNegativeInteger ;
+            sh:path types:entry ] ;
+    sh:targetClass types:Dictionary .
 
-types:NativeFormatString
-	a rdfs:Datatype ;
-	rdfs:comment "Specifies data in its native format of some external language. The data may be encoded in Base64 per [RFC4648]. Data encoded in Base64 must be denoted as such using the encoded property."@en ;
-	.
+types:Hash a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Hash"@en ;
+    rdfs:comment "A hash is a grouping of characteristics unique to the result of applying a mathematical algorithm that maps data of arbitrary size to a bit string (the 'hash') and is a one-way function, that is, a function which is practically infeasible to invert. This is commonly used for integrity checking of data. [based on https://en.wikipedia.org/wiki/Cryptographic_hash_function]"@en ;
+    sh:property [ sh:datatype xsd:hexBinary ;
+            sh:maxCount "1"^^xsd:nonNegativeInteger ;
+            sh:minCount "1"^^xsd:nonNegativeInteger ;
+            sh:path types:hashValue ],
+        [ sh:maxCount "1"^^xsd:nonNegativeInteger ;
+            sh:minCount "1"^^xsd:nonNegativeInteger ;
+            sh:path types:hashMethod ] ;
+    sh:targetClass types:Hash .
 
-types:StructuredText
-	a rdfs:Datatype ;
-	rdfs:comment "Expresses string-based data in some information structuring format (e.g., HTML5)."@en ;
-	.
+types:hashMethod a owl:DatatypeProperty ;
+    rdfs:label "hashMethod"@en ;
+    rdfs:comment "A particular cryptographic hashing method (e.g., MD5)."@en ;
+    rdfs:range vocabulary:HashNameVocab .
 
-types:entry
-	a owl:ObjectProperty ;
-	rdfs:label "entry"@en ;
-	rdfs:comment "A dictionary entry."@en ;
-	rdfs:range types:DictionaryEntry ;
-	.
+types:hashValue a owl:DatatypeProperty ;
+    rdfs:label "hashValue"@en ;
+    rdfs:comment "A cryptographic hash value."@en ;
+    rdfs:range xsd:hexBinary .
 
-types:hashMethod
-	a owl:DatatypeProperty ;
-	rdfs:label "hashMethod"@en ;
-	rdfs:comment "A particular cryptographic hashing method (e.g., MD5)."@en ;
-	rdfs:range vocabulary:HashNameVocab ;
-	.
+types:ControlledDictionaryEntry a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "ControlledDictionaryEntry"@en ;
+    rdfs:comment "A controlled dictionary entry is a single (term/key, value) pair where the term/key is constrained to an explicitly defined set of values."@en ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount "1"^^xsd:nonNegativeInteger ;
+            sh:minCount "1"^^xsd:nonNegativeInteger ;
+            sh:path types:value ],
+        [ sh:maxCount "1"^^xsd:nonNegativeInteger ;
+            sh:minCount "1"^^xsd:nonNegativeInteger ;
+            sh:path types:key ] ;
+    sh:targetClass types:ControlledDictionaryEntry .
 
-types:hashValue
-	a owl:DatatypeProperty ;
-	rdfs:label "hashValue"@en ;
-	rdfs:comment "A cryptographic hash value."@en ;
-	rdfs:range xsd:hexBinary ;
-	.
+types:entry a owl:ObjectProperty ;
+    rdfs:label "entry"@en ;
+    rdfs:comment "A dictionary entry."@en ;
+    rdfs:range types:DictionaryEntry .
 
-types:key
-	a owl:DatatypeProperty ;
-	rdfs:label "key"@en ;
-	rdfs:comment "A key property of a single dictionary entry."@en ;
-	rdfs:range xsd:string ;
-	.
+types:key a owl:DatatypeProperty ;
+    rdfs:label "key"@en ;
+    rdfs:comment "A key property of a single dictionary entry."@en ;
+    rdfs:range xsd:string .
 
-types:value
-	a owl:DatatypeProperty ;
-	rdfs:label "value"@en ;
-	rdfs:comment "A specific property value."@en ;
-	rdfs:range xsd:string ;
-	.
+types:value a owl:DatatypeProperty ;
+    rdfs:label "value"@en ;
+    rdfs:comment "A specific property value."@en ;
+    rdfs:range xsd:string .
+
+types:DictionaryEntry a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "DictionaryEntry"@en ;
+    rdfs:comment "A dictionary entry is a single (term/key, value) pair."@en ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount "1"^^xsd:nonNegativeInteger ;
+            sh:minCount "1"^^xsd:nonNegativeInteger ;
+            sh:path types:key ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount "1"^^xsd:nonNegativeInteger ;
+            sh:minCount "1"^^xsd:nonNegativeInteger ;
+            sh:path types:value ] ;
+    sh:targetClass types:DictionaryEntry .
+
+
 

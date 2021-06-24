@@ -2,28 +2,33 @@
 # imports: https://unifiedcyberontology.org/ontology/uco/core
 
 @base <https://unifiedcyberontology.org/ontology/uco/time> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix time: <https://unifiedcyberontology.org/ontology/uco/time#> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#>.
+@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#>.
+@prefix types: <https://unifiedcyberontology.org/ontology/uco/types#>.
+@prefix marking: <https://unifiedcyberontology.org/ontology/uco/marking#>.
+@prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#>.
+@prefix location: <https://unifiedcyberontology.org/ontology/uco/location#>.
+@prefix pattern: <https://unifiedcyberontology.org/ontology/uco/pattern#>.
+@prefix role: <https://unifiedcyberontology.org/ontology/uco/role#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix time: <https://unifiedcyberontology.org/ontology/uco/time#>.
+@prefix xs: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://unifiedcyberontology.org/ontology/uco/time>
-	a owl:Ontology ;
-	rdfs:label "uco-time"@en ;
-	owl:imports <https://unifiedcyberontology.org/ontology/uco/core> ;
-	.
 
-time:Time
-	a rdfs:Datatype ;
-	.
+<https://unifiedcyberontology.org/ontology/uco/time> a owl:Ontology ;
+    rdfs:label "uco-time"@en ;
+    owl:imports <https://unifiedcyberontology.org/ontology/uco/core> .
 
-time:TimeRange
-	a rdfs:Datatype ;
-	.
+time:Time a rdfs:Datatype .
 
-time:Timestamp
-	a rdfs:Datatype ;
-	.
+time:TimeRange a rdfs:Datatype .
+
+time:Timestamp a rdfs:Datatype .
+
+
 
