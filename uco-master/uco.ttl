@@ -22,49 +22,52 @@
 # imports: https://unifiedcyberontology.org/ontology/uco/victim
 
 @base <https://unifiedcyberontology.org/ontology/uco/uco> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix sh: <http://www.w3.org/ns/shacl#>.
-@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#>.
-@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#>.
-@prefix types: <https://unifiedcyberontology.org/ontology/uco/types#>.
-@prefix marking: <https://unifiedcyberontology.org/ontology/uco/marking#>.
-@prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#>.
-@prefix location: <https://unifiedcyberontology.org/ontology/uco/location#>.
-@prefix pattern: <https://unifiedcyberontology.org/ontology/uco/pattern#>.
-@prefix role: <https://unifiedcyberontology.org/ontology/uco/role#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xs: <http://www.w3.org/2001/XMLSchema#>.
+@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#> .
+@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#> .
+@prefix location: <https://unifiedcyberontology.org/ontology/uco/location#> .
+@prefix marking: <https://unifiedcyberontology.org/ontology/uco/marking#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pattern: <https://unifiedcyberontology.org/ontology/uco/pattern#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <https://unifiedcyberontology.org/ontology/uco/role#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix types: <https://unifiedcyberontology.org/ontology/uco/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://unifiedcyberontology.org/ontology/uco/uco>
+	a owl:Ontology ;
+	rdfs:label "uco-master"@en ;
+	owl:imports
+		<https://unifiedcyberontology.org/ontology/uco/action> ,
+		<https://unifiedcyberontology.org/ontology/uco/action-da> ,
+		<https://unifiedcyberontology.org/ontology/uco/core> ,
+		<https://unifiedcyberontology.org/ontology/uco/core-da> ,
+		<https://unifiedcyberontology.org/ontology/uco/identity> ,
+		<https://unifiedcyberontology.org/ontology/uco/identity-da> ,
+		<https://unifiedcyberontology.org/ontology/uco/location> ,
+		<https://unifiedcyberontology.org/ontology/uco/location-da> ,
+		<https://unifiedcyberontology.org/ontology/uco/marking> ,
+		<https://unifiedcyberontology.org/ontology/uco/marking-da> ,
+		<https://unifiedcyberontology.org/ontology/uco/observable> ,
+		<https://unifiedcyberontology.org/ontology/uco/observable-da> ,
+		<https://unifiedcyberontology.org/ontology/uco/pattern> ,
+		<https://unifiedcyberontology.org/ontology/uco/pattern-da> ,
+		<https://unifiedcyberontology.org/ontology/uco/role> ,
+		<https://unifiedcyberontology.org/ontology/uco/time> ,
+		<https://unifiedcyberontology.org/ontology/uco/tool> ,
+		<https://unifiedcyberontology.org/ontology/uco/tool-da> ,
+		<https://unifiedcyberontology.org/ontology/uco/types> ,
+		<https://unifiedcyberontology.org/ontology/uco/types-da> ,
+		<https://unifiedcyberontology.org/ontology/uco/victim>
+		;
+	owl:versionInfo "0.6.0" ;
+	.
 
-core:id rdfs:range types:Identifier .
-
-<https://unifiedcyberontology.org/ontology/uco/uco> a owl:Ontology ;
-    rdfs:label "uco-master"@en ;
-    owl:imports <https://unifiedcyberontology.org/ontology/uco/action>,
-        <https://unifiedcyberontology.org/ontology/uco/action-da>,
-        <https://unifiedcyberontology.org/ontology/uco/core>,
-        <https://unifiedcyberontology.org/ontology/uco/core-da>,
-        <https://unifiedcyberontology.org/ontology/uco/identity>,
-        <https://unifiedcyberontology.org/ontology/uco/identity-da>,
-        <https://unifiedcyberontology.org/ontology/uco/location>,
-        <https://unifiedcyberontology.org/ontology/uco/location-da>,
-        <https://unifiedcyberontology.org/ontology/uco/marking>,
-        <https://unifiedcyberontology.org/ontology/uco/marking-da>,
-        <https://unifiedcyberontology.org/ontology/uco/observable>,
-        <https://unifiedcyberontology.org/ontology/uco/observable-da>,
-        <https://unifiedcyberontology.org/ontology/uco/pattern>,
-        <https://unifiedcyberontology.org/ontology/uco/pattern-da>,
-        <https://unifiedcyberontology.org/ontology/uco/role>,
-        <https://unifiedcyberontology.org/ontology/uco/time>,
-        <https://unifiedcyberontology.org/ontology/uco/tool>,
-        <https://unifiedcyberontology.org/ontology/uco/tool-da>,
-        <https://unifiedcyberontology.org/ontology/uco/types>,
-        <https://unifiedcyberontology.org/ontology/uco/types-da>,
-        <https://unifiedcyberontology.org/ontology/uco/victim> ;
-    owl:versionInfo "0.6.0" .
-
-
+core:id
+	rdfs:range types:Identifier ;
+	.
 
