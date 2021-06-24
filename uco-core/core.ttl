@@ -35,37 +35,37 @@ core:Annotation
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class core:UcoObject ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:path core:object ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -104,32 +104,32 @@ core:Assertion
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -168,37 +168,37 @@ core:AttributedName
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:namingAuthority ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -234,42 +234,42 @@ core:Bundle
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class core:UcoObject ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:path core:object ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:description ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -305,32 +305,32 @@ core:Compilation
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -364,9 +364,9 @@ core:ConfidenceFacet
 	rdfs:label "ConfidenceFacet"@en ;
 	rdfs:comment "A confidence is a grouping of characteristics unique to an asserted level of certainty in the accuracy of some information."@en ;
 	sh:property [
-		sh:datatype xsd:nonNegativeInteger ;
-		sh:maxCount "1"^^xsd:nonNegativeInteger ;
-		sh:minCount "1"^^xsd:nonNegativeInteger ;
+		sh:datatype xsd:integer ;
+		sh:maxCount "1"^^xsd:integer ;
+		sh:minCount "1"^^xsd:integer ;
 		sh:path core:confidence ;
 	] ;
 	sh:targetClass core:ConfidenceFacet ;
@@ -383,37 +383,37 @@ core:ContextualCompilation
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class core:UcoObject ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:path core:object ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -449,48 +449,48 @@ core:ControlledVocabulary
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:anyURI ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:constrainingVocabularyReference ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:path core:value ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:constrainingVocabularyName ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -526,42 +526,42 @@ core:EnclosingCompilation
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class core:UcoObject ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:path core:object ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:description ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -595,15 +595,15 @@ core:ExternalReference
 	rdfs:comment "Characteristics of a reference to a resource outside of the UCO."@en ;
 	sh:property
 		[
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:definingContext ;
 		] ,
 		[
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:externalIdentifier ;
 		] ,
 		[
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:referenceURL ;
 		]
 		;
@@ -631,37 +631,37 @@ core:Grouping
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class core:UcoObject ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:path core:object ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -700,32 +700,32 @@ core:IdentityAbstraction
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -761,32 +761,32 @@ core:Item
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -822,32 +822,32 @@ core:MarkingDefinitionAbstraction
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -883,32 +883,32 @@ core:ModusOperandi
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -944,54 +944,54 @@ core:Relationship
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class core:UcoObject ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:path core:target ;
 		] ,
 		[
 			sh:class core:UcoObject ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:path core:source ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:boolean ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
-			sh:minCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
 			sh:path core:isDirectional ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:kindOfRelationship ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -1032,32 +1032,32 @@ core:UcoObject
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -1088,10 +1088,10 @@ core:confidence
 	rdfs:comment "An asserted level of certainty in the accuracy of some information."@en ;
 	rdfs:range [
 		a rdfs:Datatype ;
-		owl:onDatatype xsd:nonNegativeInteger ;
+		owl:onDatatype xsd:integer ;
 		owl:withRestrictions (
 			[
-				xsd:maxInclusive "100"^^xsd:nonNegativeInteger ;
+				xsd:maxInclusive "100"^^xsd:integer ;
 			]
 		) ;
 	] ;

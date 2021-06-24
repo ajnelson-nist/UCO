@@ -72,18 +72,18 @@ observable:AccountAuthenticationFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:passwordLastChanged ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:password ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:passwordType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -98,44 +98,44 @@ observable:AccountFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:accountIssuer ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:accountType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:expirationTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:modifiedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:owner ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isActive ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:accountIdentifier ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "AccountFacet"@en ;
@@ -155,19 +155,19 @@ observable:AlternateDataStream
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:hashes ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:size ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty core:name ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "AlternateDataStream"@en ;
@@ -203,7 +203,7 @@ observable:ApplicationAccountFacet
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "ApplicationAccountFacet"@en ;
@@ -218,24 +218,24 @@ observable:ApplicationFacet
 			a owl:Restriction ;
 			owl:onProperty observable:operatingSystem ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:numberOfLaunches ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:applicationIdentifier ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:version ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -257,19 +257,19 @@ observable:ArchiveFileFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:archiveType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:comment ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:version ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -298,25 +298,25 @@ observable:AudioFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:bitRate ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:duration ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:audioType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:format ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -338,19 +338,19 @@ observable:AutonomousSystemFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:regionalInternetRegistry ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:asHandle ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:number ;
 			owl:onDataRange xsd:integer ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "AutonomousSystemFacet"@en ;
@@ -378,7 +378,7 @@ observable:BluetoothAddressFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -407,34 +407,34 @@ observable:BrowserBookmarkFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:accessedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:modifiedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:visitCount ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:bookmarkPath ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -456,46 +456,46 @@ observable:BrowserCookieFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:accessedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:expirationTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:cookieDomain ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isSecure ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:cookieName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:cookiePath ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -524,78 +524,78 @@ observable:CalendarEntryFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:endTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:location ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:modifiedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:owner ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:remindTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:startTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isPrivate ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:duration ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:eventStatus ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:eventType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:recurrence ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -611,13 +611,13 @@ observable:CalendarFacet
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:owner ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "CalendarFacet"@en ;
@@ -645,13 +645,13 @@ observable:CompressedStreamFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:compressionRatio ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:double ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:compressionMethod ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -673,111 +673,111 @@ observable:ComputerSpecificationFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:biosDate ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:biosReleaseDate ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:localTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:systemTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:currentSystemDate ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:dateTime ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:availableRam ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:totalRam ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:biosManufacturer ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:biosSerialNumber ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:biosVersion ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:cpu ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:cpuFamily ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:gpu ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:gpuFamily ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:hostname ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:processorArchitecture ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:timezoneDST ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:timezoneStandard ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:uptime ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -798,13 +798,13 @@ observable:ContactAddress
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:geolocationAddress ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange location:Location ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactAddressScope ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange [
 				a rdfs:Datatype ;
 				owl:unionOf (
@@ -824,56 +824,56 @@ observable:ContactAffiliation
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:organizationDepartment ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:organizationPosition ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:organizationLocation ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactAddress ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:contactEmail ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactEmail ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:contactMessaging ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactMessaging ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:contactPhone ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactPhone ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:contactProfile ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactProfile ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:contactURL ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactURL ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactOrganization ;
 			owl:onDataRange identity:Organization ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "ContactListAffiliation"@en ;
@@ -886,13 +886,13 @@ observable:ContactEmail
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:emailAddress ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactEmailScope ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange [
 				a rdfs:Datatype ;
 				owl:unionOf (
@@ -914,138 +914,138 @@ observable:ContactFacet
 			a owl:Restriction ;
 			owl:onProperty observable:sourceApplication ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty identity:birthdate ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:dateTime ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:lastTimeContacted ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:dateTime ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:numberTimesContacted ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:displayName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:firstName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:lastName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:middleName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:namePhonetic ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:namePrefix ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:nameSuffix ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactGroup ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactNote ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:nickname ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactAddress ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactAddress ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactAffiliation ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactAffiliation ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactEmail ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactEmail ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactMessaging ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactMessaging ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactPhone ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactPhone ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactProfile ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactProfile ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactSIP ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactSIP ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactURL ;
-			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "0"^^xsd:integer ;
 			owl:onDataRange observable:ContactURL ;
 		]
 		;
@@ -1067,13 +1067,13 @@ observable:ContactListFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:sourceApplication ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contact ;
-			owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		]
 		;
@@ -1087,13 +1087,13 @@ observable:ContactMessaging
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:contactAddress ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:contactMessagingPlatform ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		]
 		;
@@ -1107,13 +1107,13 @@ observable:ContactPhone
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:contactPhoneNumber ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactPhoneScope ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange [
 				a rdfs:Datatype ;
 				owl:unionOf (
@@ -1133,13 +1133,13 @@ observable:ContactProfile
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactProfilePlatform ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profile ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		]
 		;
@@ -1153,13 +1153,13 @@ observable:ContactSIP
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:sipAddress ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactSIPScope ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange [
 				a rdfs:Datatype ;
 				owl:unionOf (
@@ -1179,13 +1179,13 @@ observable:ContactURL
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observable:url ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactURLScope ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange [
 				a rdfs:Datatype ;
 				owl:unionOf (
@@ -1213,54 +1213,54 @@ observable:ContentDataFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:byteOrder ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:dataPayloadReferenceURL ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isEncrypted ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:entropy ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:double ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sizeInBytes ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:dataPayload ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:magicNumber ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mimeClass ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mimeType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -1310,19 +1310,19 @@ observable:DataRangeFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:rangeOffset ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:rangeSize ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:rangeOffsetType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -1351,24 +1351,24 @@ observable:DeviceFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:deviceType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:manufacturer ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:model ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:serialNumber ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -1390,23 +1390,23 @@ observable:DigitalAccountFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:firstLoginTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:lastLoginTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isDisabled ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:displayName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -1428,13 +1428,13 @@ observable:DigitalAddressFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
-			owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			owl:cardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:displayName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -1456,30 +1456,30 @@ observable:DigitalSignatureInfoFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:certificateIssuer ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:certificateSubject ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:signatureDescription ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:signatureExists ;
 			owl:onDataRange xsd:boolean ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:signatureVerified ;
 			owl:onDataRange xsd:boolean ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "DigitalSignatureInfoFacet"@en ;
@@ -1507,18 +1507,18 @@ observable:DiskFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:diskType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:diskSize ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:freeSpace ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		]
 		;
@@ -1540,53 +1540,53 @@ observable:DiskPartitionFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:diskPartitionType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:partitionLength ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:partitionOffset ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:spaceLeft ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:spaceUsed ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:totalSpace ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mountPoint ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:partitionID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -1608,14 +1608,14 @@ observable:DomainNameFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isTLD ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:value ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "DomainNameFacet"@en ;
@@ -1636,7 +1636,7 @@ observable:EXIFFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:exifData ;
-			owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "EXIFFacet"@en ;
@@ -1658,7 +1658,7 @@ observable:EmailAccountFacet
 			a owl:Restriction ;
 			owl:onProperty observable:emailAddress ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "EmailAccountFacet"@en ;
@@ -1679,14 +1679,14 @@ observable:EmailAddressFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:displayName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "EmailAddressFacet"@en ;
@@ -1707,124 +1707,124 @@ observable:EmailMessageFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:modifiedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:otherHeaders ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:receivedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sentTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:bodyRaw ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:from ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:headerRaw ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:inReplyTo ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sender ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:xOriginatingIP ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isRead ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:body ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contentDisposition ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contentType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:messageID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:priority ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:xMailer ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isMimeEncoded ;
 			owl:onDataRange xsd:boolean ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isMultipart ;
 			owl:onDataRange xsd:boolean ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "EmailMessageFacet"@en ;
@@ -1838,7 +1838,7 @@ observable:EncodedStreamFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:encodingMethod ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -1853,12 +1853,12 @@ observable:EncryptedStreamFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:encryptionMethod ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:encryptionMode ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "EncryptedStreamFacet"@en ;
@@ -1871,14 +1871,14 @@ observable:EnvironmentVariable
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:value ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty core:name ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "EnvironmentVariable"@en ;
@@ -1899,43 +1899,43 @@ observable:EventFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:cyberAction ;
 			owl:onClass observable:ObservableAction ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:computerName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:eventID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:eventText ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:eventType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "EventFacet"@en ;
@@ -1956,53 +1956,53 @@ observable:ExtInodeFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extDeletionTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extInodeChangeTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extFileType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extFlags ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extHardLinkCount ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extInodeID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extPermissions ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extSGID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extSUID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		]
 		;
@@ -2016,34 +2016,34 @@ observable:ExtractedString
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:byteStringValue ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:encoding ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:language ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:length ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:englishTranslation ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:stringValue ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2073,44 +2073,44 @@ observable:FileFacet
 			a owl:Restriction ;
 			rdfs:comment "When used to characterize a file the sizeInBytes property conveys the recorded size of a file in a file system."@en ;
 			owl:onProperty observable:sizeInBytes ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:accessedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:fileSystemType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:metadataChangeTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:modifiedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:allocationStatus ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extension ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2126,7 +2126,7 @@ observable:FilePermissionsFacet
 			a owl:Restriction ;
 			owl:onProperty observable:owner ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "FilePermissionsFacet"@en ;
@@ -2147,12 +2147,12 @@ observable:FileSystemFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:fileSystemType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:clusterSize ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		]
 		;
@@ -2216,18 +2216,18 @@ observable:GeoLocationEntryFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:location ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "GeoLocationEntryFacet"@en ;
@@ -2248,13 +2248,13 @@ observable:GeoLocationLogFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "GeoLocationLogFacet"@en ;
@@ -2275,18 +2275,18 @@ observable:GeoLocationTrackFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:endTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:startTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "GeoLocationTrackFacet"@en ;
@@ -2299,19 +2299,19 @@ observable:GlobalFlagType
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:abbreviation ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:destination ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:symbolicName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2333,37 +2333,37 @@ observable:HTTPConnectionFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:httpRequestHeader ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:httpMessageBodyData ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:httpMesageBodyLength ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:requestVersion ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:requestMethod ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:requestValue ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "HTTPConnectionFacet"@en ;
@@ -2404,13 +2404,13 @@ observable:IComHandlerActionType
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:comClassID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:comData ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2424,19 +2424,19 @@ observable:IExecActionType
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:execArguments ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:execProgramPath ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:execWorkingDirectory ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2472,13 +2472,13 @@ observable:IPAddressFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
-			owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			owl:cardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:displayName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2508,7 +2508,7 @@ observable:IPv4AddressFacet
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "IPv4AddressFacet"@en ;
@@ -2530,7 +2530,7 @@ observable:IPv6AddressFacet
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "IPv6AddressFacet"@en ;
@@ -2543,13 +2543,13 @@ observable:IShowMessageActionType
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:showMessageBody ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:showMessageTitle ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2571,7 +2571,7 @@ observable:ImageFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:imageType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2593,13 +2593,13 @@ observable:InstantMessagingAddressFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
-			owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			owl:cardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:displayName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2628,7 +2628,7 @@ observable:LibraryFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:libraryType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "LibraryFacet"@en ;
@@ -2650,7 +2650,7 @@ observable:MACAddressFacet
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "MACAddressFacet"@en ;
@@ -2685,37 +2685,37 @@ observable:MemoryFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:regionSize ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:blockType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:MemoryBlockTypeVocab ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isInjected ;
 			owl:onDataRange xsd:boolean ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isMapped ;
 			owl:onDataRange xsd:boolean ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isProtected ;
 			owl:onDataRange xsd:boolean ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isVolatile ;
 			owl:onDataRange xsd:boolean ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "MemoryFacet"@en ;
@@ -2736,42 +2736,42 @@ observable:MessageFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sentTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:from ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:messageID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:messageText ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:messageType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sessionID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2793,14 +2793,14 @@ observable:MessageThreadFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:visibility ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:message ;
 			owl:onClass observable:ObservableObject ;
-			owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:minQualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "MessageThreadFacet"@en ;
@@ -2814,68 +2814,68 @@ observable:MftRecordFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mftFileNameAccessedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mftFileNameCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mftFileNameModifiedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mftFileNameRecordChangeTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mftRecordChangeTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mftFileID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mftFileNameLength ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mftFlags ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mftParentID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:ntfsHardLinkCount ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:ntfsOwnerID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:ntfsOwnerSID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2890,24 +2890,24 @@ observable:MimePartType
 			a owl:Restriction ;
 			owl:onProperty observable:bodyRaw ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:body ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contentDisposition ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contentType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2929,19 +2929,19 @@ observable:MobileAccountFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:IMSI ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:MSISDN ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:MSISDNType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -2963,55 +2963,55 @@ observable:MobileDeviceFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:clockSetting ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:dateTime ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:storageCapacityInBytes ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:ESN ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:IMEI ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:bluetoothDeviceName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:keypadUnlockCode ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mockLocationsAllowed ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:network ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:phoneActivationTime ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -3034,7 +3034,7 @@ observable:MutexFacet
 			a owl:Restriction ;
 			owl:onProperty observable:isNamed ;
 			owl:onDataRange xsd:boolean ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "MutexFacet"@en ;
@@ -3055,13 +3055,13 @@ observable:NTFSFileFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:entryID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sid ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -3097,34 +3097,34 @@ observable:NetworkConnectionFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:endTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:protocols ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:startTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isActive ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:destinationPort ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sourcePort ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		]
 		;
@@ -3153,42 +3153,42 @@ observable:NetworkFlowFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:ipfix ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:dstPayload ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:srcPayload ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:dstBytes ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:dstPackets ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:srcBytes ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:srcPackets ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		]
 		;
@@ -3210,23 +3210,23 @@ observable:NetworkInterfaceFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:dhcpLeaseExpires ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:dhcpLeaseObtained ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:macAddress ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:adapterName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -3445,24 +3445,24 @@ observable:NoteFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:modifiedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:text ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "NoteFacet"@en ;
@@ -3494,12 +3494,12 @@ observable:ObservableObject
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:state ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:hasChanged ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		]
 		;
@@ -3531,7 +3531,7 @@ observable:Observation
 		[
 			a owl:Restriction ;
 			owl:onProperty core:name ;
-			owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			owl:cardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
@@ -3557,17 +3557,17 @@ observable:OnlineServiceFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty core:name ;
-			owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			owl:cardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:inetLocation ;
-			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "0"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:location ;
-			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "0"^^xsd:integer ;
 		]
 		;
 	rdfs:label "OnlineServiceFacet"@en-US ;
@@ -3588,28 +3588,28 @@ observable:OperatingSystemFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:bitness ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:environmentVariables ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:installDate ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:manufacturer ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:version ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -3631,24 +3631,24 @@ observable:PDFFileFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:documentInformationDictionary ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isOptimized ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:pdfId1 ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:version ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -3699,7 +3699,7 @@ observable:PhoneAccountFacet
 			a owl:Restriction ;
 			owl:onProperty observable:phoneNumber ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "PhoneAccountFacet"@en ;
@@ -3720,42 +3720,42 @@ observable:PhoneCallFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:endTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:startTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:from ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:to ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:duration ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:callType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "PhoneCallFacet"@en ;
@@ -3790,64 +3790,64 @@ observable:ProcessFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:environmentVariables ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:exitTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:binary ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:creatorUser ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:parent ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isHidden ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:exitStatus ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:pid ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:currentWorkingDirectory ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:status ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -3869,62 +3869,62 @@ observable:ProfileFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty core:name ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactAddress ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactEmail ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactMessaging ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactPhone ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactURL ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:displayName ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileAccount ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileCreated ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileIdentity ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileService ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileLanguage ;
-			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "0"^^xsd:integer ;
 		]
 		;
 	rdfs:label "ProfileFacet"@en-US ;
@@ -3940,7 +3940,7 @@ observable:PropertiesEnumeratedEffectFacet
 			a owl:Restriction ;
 			owl:onProperty observable:properties ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "PropertiesEnumeratedEffectFacet"@en ;
@@ -3955,13 +3955,13 @@ observable:PropertyReadEffectFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:propertyName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:value ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -3984,36 +3984,36 @@ observable:RasterPictureFacet
 			a owl:Restriction ;
 			owl:onProperty observable:camera ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:bitsPerPixel ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:pictureHeight ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:pictureWidth ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:imageCompressionMethod ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:pictureType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -4103,48 +4103,48 @@ observable:SIMCardFacet
 			a owl:Restriction ;
 			owl:onProperty observable:carrier ;
 			owl:onClass identity:Identity ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:storageCapacityInBytes ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:ICCID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:IMSI ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:PIN ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:PUK ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:SIMForm ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:SIMType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -4180,13 +4180,13 @@ observable:SIPAddressFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
-			owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			owl:cardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:displayName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -4208,7 +4208,7 @@ observable:SMSMessageFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isRead ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		]
 		;
@@ -4230,19 +4230,19 @@ observable:SQLiteBlobFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:columnName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:rowCondition ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:tableName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -4273,7 +4273,7 @@ observable:SendControlCodeEffectFacet
 			a owl:Restriction ;
 			owl:onProperty observable:controlCode ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "SendControlCodeEffectFacet"@en ;
@@ -4322,31 +4322,31 @@ observable:SoftwareFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:cpeid ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:language ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:manufacturer ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:swid ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:version ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -4363,13 +4363,13 @@ observable:StateChangeEffectFacet
 			a owl:Restriction ;
 			owl:onProperty observable:oldObject ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:newObject ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "StateChangeEffectFacet"@en ;
@@ -4391,7 +4391,7 @@ observable:SymbolicLinkFacet
 			a owl:Restriction ;
 			owl:onProperty observable:targetFile ;
 			owl:onClass observable:ObservableObject ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "SymbolicLinkFacet"@en ;
@@ -4419,36 +4419,36 @@ observable:TaskActionType
 			a owl:Restriction ;
 			owl:onProperty observable:iComHandlerAction ;
 			owl:onClass observable:IComHandlerActionType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:iExecAction ;
 			owl:onClass observable:IExecActionType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:iShowMessageAction ;
 			owl:onClass observable:IShowMessageActionType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:iEmailAction ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:actionID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:actionType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:TaskActionTypeVocab ;
 		]
 		;
@@ -4469,47 +4469,47 @@ observable:TriggerType
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:triggerBeginTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:triggerEndTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isEnabled ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:triggerDelay ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:triggerMaxRunTime ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:triggerSessionChangeType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:triggerFrequency ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:TriggerFrequencyVocab ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:triggerType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:TriggerTypeVocab ;
 		]
 		;
@@ -4531,82 +4531,82 @@ observable:TwitterProfileFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:twitterId ;
-			owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			owl:cardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:favoritesCount ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:followersCount ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:friendsCount ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:listedCount ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileBackgroundLocation ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileBannerLocation ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileImageLocation ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileIsProtected ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileIsVerified ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:statusesCount ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:twitterHandle ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:userLocationString ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileBackgroundHash ;
-			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "0"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileBannerHash ;
-			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "0"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:profileImageHash ;
-			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "0"^^xsd:integer ;
 		]
 		;
 	rdfs:label "TwitterProfileFacet" ;
@@ -4627,13 +4627,13 @@ observable:UNIXAccountFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:gid ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:shell ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -4676,13 +4676,13 @@ observable:UNIXVolumeFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mountPoint ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:options ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -4705,55 +4705,55 @@ observable:URLFacet
 			a owl:Restriction ;
 			owl:onProperty observable:host ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:userName ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:port ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:fragment ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:password ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:path ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:query ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:scheme ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:fullValue ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "URLFacet"@en ;
@@ -4773,57 +4773,57 @@ observable:URLHistoryEntry
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:browserUserProfile ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:expirationTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:firstVisit ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:hostname ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:lastVisit ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:manuallyEnteredCount ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:pageTitle ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:url ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:visitCount ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:keywordSearchTerm ;
-			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "0"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:referrerUrl ;
-			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "0"^^xsd:integer ;
 		]
 		;
 	rdfs:label "URL History Entry"@en-US ;
@@ -4837,12 +4837,12 @@ observable:URLHistoryFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:browserInformation ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:urlHistoryEntry ;
-			owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:minCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "URLHistoryFacet"@en-US ;
@@ -4863,32 +4863,32 @@ observable:URLVisitFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:browserInformation ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:fromURLVisit ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:url ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:urlTransitionType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:visitDuration ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:visitTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "URLVisitFacet"@en ;
@@ -4909,25 +4909,25 @@ observable:UserAccountFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:canEscalatePrivs ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isPrivileged ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isServiceAccount ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:homeDirectory ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -4949,29 +4949,29 @@ observable:UserSessionFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:loginTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:logoutTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:effectiveUser ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:effectiveGroup ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:effectiveGroupID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -4988,7 +4988,7 @@ observable:ValuesEnumeratedEffectFacet
 			a owl:Restriction ;
 			owl:onProperty observable:values ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "ValuesEnumeratedEffectFacet"@en ;
@@ -5009,13 +5009,13 @@ observable:VolumeFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sectorSize ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:volumeID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -5044,87 +5044,87 @@ observable:WhoIsFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:creationDate ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:expirationDate ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:lookupDate ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:updatedDate ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:domainName ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:ipAddress ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:registrantContactInfo ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:serverName ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:registrarInfo ;
 			owl:onClass observable:WhoisRegistrarInfoType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:domainID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:remarks ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sponsoringRegistrar ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:regionalInternetRegistry ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:RegionalRegistryTypeVocab ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:dnssec ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:WhoisDNSSECTypeVocab ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:status ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:WhoisStatusTypeVocab ;
 		]
 		;
@@ -5139,7 +5139,7 @@ observable:WhoisContactFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:whoisContactType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange [
 				a rdfs:Datatype ;
 				owl:unionOf (
@@ -5159,48 +5159,48 @@ observable:WhoisRegistrarInfoType
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:geolocationAddress ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:contactPhoneNumber ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:emailAddress ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:referralURL ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:whoisServer ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:registrarGUID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:registrarID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:registrarName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -5222,7 +5222,7 @@ observable:WifiAddressFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:addressValue ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -5273,7 +5273,7 @@ observable:WindowsActiveDirectoryAccountFacet
 			a owl:Restriction ;
 			owl:onProperty observable:objectGUID ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "WindowsActiveDirectoryAccountFacet"@en ;
@@ -5294,47 +5294,47 @@ observable:WindowsComputerSpecificationFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:registeredOrganization ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:registeredOwner ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:windowsDirectory ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:windowsSystemDirectory ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:windowsTempDirectory ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:msProductID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:msProductName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:netBIOSName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -5405,41 +5405,41 @@ observable:WindowsPEBinaryFileFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:peType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:timeDateStamp ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:optionalHeader ;
 			owl:onClass observable:WindowsPEOptionalHeader ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:numberOfSections ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:numberOfSymbols ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:sizeOfOptionalHeader ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:impHash ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -5472,7 +5472,7 @@ observable:WindowsPEFileHeader
 	rdfs:subClassOf [
 		a owl:Restriction ;
 		owl:onProperty observable:timeDateStamp ;
-		owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+		owl:maxCardinality "1"^^xsd:integer ;
 	] ;
 	rdfs:label "WindowsPEFileHeader"@en ;
 	rdfs:comment "A Windows PE file header is a grouping of characteristics unique to the 'header' of a Windows PE (Portable Executable) file, consisting of a collection of metadata about the overall nature and structure of the file."@en ;
@@ -5490,20 +5490,20 @@ observable:WindowsPESection
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:entropy ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:float ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:size ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty core:name ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "WindowsPESection"@en ;
@@ -5524,35 +5524,35 @@ observable:WindowsPrefetchFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:firstRun ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:lastRun ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:volume ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:timesExecuted ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:applicationFileName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:prefetchHash ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -5574,36 +5574,36 @@ observable:WindowsProcessFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:startupInfo ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:aslrEnabled ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:depEnabled ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:ownerSID ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:priority ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:windowTitle ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -5625,7 +5625,7 @@ observable:WindowsRegistryHiveFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:hiveType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -5647,25 +5647,25 @@ observable:WindowsRegistryKeyFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:modifiedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:creator ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:numberOfSubkeys ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:key ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "WindowsRegistryKeyFacet"@en ;
@@ -5678,19 +5678,19 @@ observable:WindowsRegistryValue
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:dataType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:data ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty core:name ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "WindowsRegistryValue"@en ;
@@ -5711,41 +5711,41 @@ observable:WindowsServiceFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:serviceStatus ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:serviceType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:startType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:displayName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:groupName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:startCommandLine ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:serviceName ;
 			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:qualifiedCardinality "1"^^xsd:integer ;
 		]
 		;
 	rdfs:label "WindowsServiceFacet"@en ;
@@ -5861,100 +5861,100 @@ observable:WindowsTaskFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:mostRecentRunTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:nextRunTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:observableCreatedTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:account ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:application ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:workItemData ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:workingDirectory ;
 			owl:onClass observable:ObservableObject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:exitCode ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:maxRunTime ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:accountLogonType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:accountRunLevel ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:imageName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:parameters ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:taskComment ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:taskCreator ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:priority ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:TaskPriorityVocab ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:status ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:TaskStatusVocab ;
 		]
 		;
@@ -5976,29 +5976,29 @@ observable:WindowsThreadFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:creationTime ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:runningStatus ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:priority ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:context ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:securityAttributes ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -6013,19 +6013,19 @@ observable:WindowsVolumeFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:driveLetter ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:driveType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange vocabulary:WindowsDriveTypeVocab ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:windowsVolumeAttributes ;
-			owl:maxQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "4"^^xsd:integer ;
 			owl:onDataRange vocabulary:WindowsVolumeAttributeVocab ;
 		]
 		;
@@ -6054,13 +6054,13 @@ observable:WirelessNetworkConnectionFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:baseStation ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:ssid ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -6082,92 +6082,92 @@ observable:X509CertificateFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:issuerHash ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subjectHash ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:thumbprintHash ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:validityNotAfter ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:validityNotBefore ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:x509v3extensions ;
 			owl:onClass observable:X509V3ExtensionsFacet ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:isSelfSigned ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:boolean ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subjectPublicKeyExponent ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:issuer ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:serialNumber ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:signature ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:signatureAlgorithm ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subject ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subjectPublicKeyAlgorithm ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subjectPublicKeyModulus ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:version ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -6189,95 +6189,95 @@ observable:X509V3ExtensionsFacet
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:privateKeyUsagePeriodNotAfter ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:privateKeyUsagePeriodNotBefore ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxCardinality "1"^^xsd:integer ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:authorityKeyIdentifier ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:basicConstraints ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:certificatePolicies ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:crlDistributionPoints ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:extendedKeyUsage ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:inhibitAnyPolicy ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:issuerAlternativeName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:keyUsage ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:nameConstraints ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:policyConstraints ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:policyMappings ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subjectAlternativeName ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subjectDirectoryAttributes ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
 			owl:onProperty observable:subjectKeyIdentifier ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:maxQualifiedCardinality "1"^^xsd:integer ;
 			owl:onDataRange xsd:string ;
 		]
 		;
@@ -7560,7 +7560,7 @@ observable:favoritesCount
 	a owl:DatatypeProperty ;
 	rdfs:label "Favorites Count"@en-US ;
 	rdfs:comment "Specifies the number of times that this profile has favorited a tweet."@en-US ;
-	rdfs:range xsd:nonNegativeInteger ;
+	rdfs:range xsd:integer ;
 	.
 
 observable:faxNumber
@@ -7644,7 +7644,7 @@ observable:followersCount
 	a owl:DatatypeProperty ;
 	rdfs:label "Followers Count"@en-US ;
 	rdfs:comment "Specifies the followers count associated with the twitter profile."@en-US ;
-	rdfs:range xsd:nonNegativeInteger ;
+	rdfs:range xsd:integer ;
 	.
 
 observable:format
@@ -7678,7 +7678,7 @@ observable:friendsCount
 	a owl:DatatypeProperty ;
 	rdfs:label "Friends Count"@en-US ;
 	rdfs:comment "Specifies the friends count associated with the twitter profile."@en-US ;
-	rdfs:range xsd:nonNegativeInteger ;
+	rdfs:range xsd:integer ;
 	.
 
 observable:from
@@ -8313,7 +8313,7 @@ observable:manuallyEnteredCount
 	a owl:DatatypeProperty ;
 	rdfs:label "Manually-Entered Count"@en ;
 	rdfs:comment "Specifies the number of times the URL referred to by the URL field was manually entered into the browser's address field by the user. This field is only applicable for URL history entries generated by Google's Chrome browser."@en ;
-	rdfs:range xsd:nonNegativeInteger ;
+	rdfs:range xsd:integer ;
 	.
 
 observable:manufacturer
@@ -9309,7 +9309,7 @@ observable:ruid
 	a owl:DatatypeProperty ;
 	rdfs:label "ruid"@en ;
 	rdfs:comment "Specifies the real user ID, which represents the Unix user who created the process."@en ;
-	rdfs:range xsd:nonNegativeInteger ;
+	rdfs:range xsd:integer ;
 	.
 
 observable:runningStatus
@@ -9629,7 +9629,7 @@ observable:ssid
 observable:stackSize
 	a owl:DatatypeProperty ;
 	rdfs:label "stackSize"@en ;
-	rdfs:range xsd:nonNegativeInteger ;
+	rdfs:range xsd:integer ;
 	.
 
 observable:startAddress
@@ -9679,7 +9679,7 @@ observable:statusesCount
 	a owl:DatatypeProperty ;
 	rdfs:label "Statuses Count"@en-US ;
 	rdfs:comment "Specifies the number of tweets that this profile has issued."@en-US ;
-	rdfs:range xsd:nonNegativeInteger ;
+	rdfs:range xsd:integer ;
 	.
 
 observable:storageCapacityInBytes
@@ -9815,7 +9815,7 @@ observable:text
 observable:threadID
 	a owl:DatatypeProperty ;
 	rdfs:label "threadID"@en ;
-	rdfs:range xsd:nonNegativeInteger ;
+	rdfs:range xsd:integer ;
 	.
 
 observable:thumbprintHash

@@ -34,22 +34,22 @@ location:GPSCoordinatesFacet
 	sh:property
 		[
 			sh:datatype xsd:double ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:hdop ;
 		] ,
 		[
 			sh:datatype xsd:double ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:pdop ;
 		] ,
 		[
 			sh:datatype xsd:double ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:tdop ;
 		] ,
 		[
 			sh:datatype xsd:double ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:vdop ;
 		]
 		;
@@ -67,17 +67,17 @@ location:LatLongCoordinatesFacet
 	sh:property
 		[
 			sh:datatype xsd:decimal ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:altitude ;
 		] ,
 		[
 			sh:datatype xsd:decimal ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:latitude ;
 		] ,
 		[
 			sh:datatype xsd:decimal ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:longitude ;
 		]
 		;
@@ -95,32 +95,32 @@ location:Location
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -156,32 +156,32 @@ location:SimpleAddressFacet
 	sh:property
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:addressType ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:country ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:locality ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:postalCode ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:region ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path location:street ;
 		]
 		;

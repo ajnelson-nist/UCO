@@ -40,32 +40,32 @@ victim:Victim
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -101,32 +101,32 @@ victim:VictimTargeting
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[

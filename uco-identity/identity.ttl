@@ -37,8 +37,8 @@ identity:AddressFacet
 	rdfs:comment "An address facet is a grouping of characteristics unique to an administrative identifier for a geolocation associated with a specific identity."@en ;
 	sh:property [
 		sh:class location:Location ;
-		sh:maxCount "1"^^xsd:nonNegativeInteger ;
-		sh:minCount "1"^^xsd:nonNegativeInteger ;
+		sh:maxCount "1"^^xsd:integer ;
+		sh:minCount "1"^^xsd:integer ;
 		sh:path identity:address ;
 	] ;
 	sh:targetClass identity:AddressFacet ;
@@ -65,7 +65,7 @@ identity:BirthInformationFacet
 	rdfs:comment "Birth information is a grouping of characteristics unique to information pertaining to the birth of an entity."@en ;
 	sh:property [
 		sh:datatype xsd:dateTime ;
-		sh:maxCount "1"^^xsd:nonNegativeInteger ;
+		sh:maxCount "1"^^xsd:integer ;
 		sh:path identity:birthdate ;
 	] ;
 	sh:targetClass identity:BirthInformationFacet ;
@@ -115,32 +115,32 @@ identity:Identity
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -220,32 +220,32 @@ identity:Organization
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
@@ -292,32 +292,32 @@ identity:Person
 	sh:property
 		[
 			sh:class core:ExternalReference ;
-			sh:minCount "0"^^xsd:nonNegativeInteger ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:path core:externalReference ;
 		] ,
 		[
 			sh:class core:IdentityAbstraction ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:createdBy ;
 		] ,
 		[
 			sh:class types:Identifier ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:id ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:objectCreatedTime ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:name ;
 		] ,
 		[
 			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:nonNegativeInteger ;
+			sh:maxCount "1"^^xsd:integer ;
 			sh:path core:specVersion ;
 		] ,
 		[
