@@ -789,7 +789,7 @@ observable:ContactAddress
 	rdfs:subClassOf
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:geolocationAddress ;
+			owl:onProperty observable:observable:geolocationAddress ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange <https://unifiedcyberontology.org/ontology/uco/location#Location> ;
 		] ,
@@ -815,49 +815,49 @@ observable:ContactAffiliation
 	rdfs:subClassOf
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:organizationDepartment ;
+			owl:onProperty observable:observable:organizationDepartment ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:organizationPosition ;
+			owl:onProperty observable:observable:organizationPosition ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange xsd:string ;
 		] ,
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:organizationLocation ;
+			owl:onProperty observable:observable:organizationLocation ;
 			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ContactAddress ;
 		] ,
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:contactEmail ;
+			owl:onProperty observable:observable:contactEmail ;
 			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ContactEmail ;
 		] ,
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:contactMessaging ;
+			owl:onProperty observable:observable:contactMessaging ;
 			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ContactMessaging ;
 		] ,
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:contactPhone ;
+			owl:onProperty observable:observable:contactPhone ;
 			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ContactPhone ;
 		] ,
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:contactProfile ;
+			owl:onProperty observable:observable:contactProfile ;
 			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ContactProfile ;
 		] ,
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:contactURL ;
+			owl:onProperty observable:observable:contactURL ;
 			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ContactURL ;
 		] ,
@@ -877,7 +877,7 @@ observable:ContactEmail
 	rdfs:subClassOf
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:emailAddress ;
+			owl:onProperty observable:observable:emailAddress ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
@@ -1058,7 +1058,7 @@ observable:ContactListFacet
 		<https://unifiedcyberontology.org/ontology/uco/core#Facet> ,
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:sourceApplication ;
+			owl:onProperty observable:observable:sourceApplication ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
@@ -1078,13 +1078,13 @@ observable:ContactMessaging
 	rdfs:subClassOf
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:contactAddress ;
+			owl:onProperty observable:observable:contactAddress ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:contactMessagingPlatform ;
+			owl:onProperty observable:observable:contactMessagingPlatform ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ObservableObject ;
 		]
@@ -1098,7 +1098,7 @@ observable:ContactPhone
 	rdfs:subClassOf
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:contactPhoneNumber ;
+			owl:onProperty observable:observable:contactPhoneNumber ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
@@ -1144,7 +1144,7 @@ observable:ContactSIP
 	rdfs:subClassOf
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:sipAddress ;
+			owl:onProperty observable:observable:sipAddress ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
@@ -1170,7 +1170,7 @@ observable:ContactURL
 	rdfs:subClassOf
 		[
 			a owl:Restriction ;
-			owl:onProperty observable:url ;
+			owl:onProperty observable:observable:url ;
 			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 			owl:onDataRange observable:ObservableObject ;
 		] ,
@@ -7555,6 +7555,13 @@ observable:favoritesCount
 	rdfs:range xsd:nonNegativeInteger ;
 	.
 
+observable:faxNumber
+	a owl:ObjectProperty ;
+	rdfs:label "faxNumber"@en ;
+	rdfs:comment "A phone number(account) of a fax."@en ;
+	rdfs:range observable:ObservableObject ;
+	.
+
 observable:fileAlignment
 	a owl:DatatypeProperty ;
 	rdfs:label "fileAlignment"@en ;
@@ -9040,13 +9047,6 @@ observable:profileIsVerified
 	rdfs:range xsd:boolean ;
 	.
 
-observable:profileLanguage
-	a owl:DatatypeProperty ;
-	rdfs:label "Profile Language"@en-US ;
-	rdfs:comment "Specifies the language associated with the profile. When present, it MUST be a language code conformant to RFC 5646/BCP47."@en-US ;
-	rdfs:range xsd:string ;
-	.
-
 observable:profileService
 	a owl:ObjectProperty ;
 	rdfs:label "Profile Service"@en-US ;
@@ -9059,6 +9059,13 @@ observable:profileWebsite
 	rdfs:label "Profile Website"@en-US ;
 	rdfs:comment "Specifies the website URL associated with the profile."@en-US ;
 	rdfs:range observable:ObservableObject ;
+	.
+
+observable:profilelanguage
+	a owl:DatatypeProperty ;
+	rdfs:label "Profile Language"@en-US ;
+	rdfs:comment "Specifies the language associated with the profile. When present, it MUST be a language code conformant to RFC 5646/BCP47."@en-US ;
+	rdfs:range xsd:string ;
 	.
 
 observable:properties
